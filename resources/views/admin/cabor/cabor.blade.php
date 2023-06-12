@@ -17,9 +17,9 @@
                       <a type="button" class="mdi mdi-account-plus btn btn-gradient-success btn-rounded" href="{{url('cabor/create')}}"> Tambah</a>
                     </div>
                     <div style="float: right;">
-                      <a type="button" class="mdi mdi-file-pdf btn btn btn-outline-info btn-rounded" target="_blank" href="#"> PDF</a>
+                      <a type="button" class="mdi mdi-file-pdf btn btn btn-outline-info btn-rounded" target="_blank" href="{{url('cabor/exportpdf')}}"> PDF</a>
                       <a type="button" class="mdi mdi-file-excel btn btn-outline-info btn-rounded" target="_blank" href="#"> Excel</a>
-                      <a type="button" class="mdi mdi-printer btn btn-outline-info btn-rounded" target="_blank" href="#"> Print</a>
+                      <a type="button" class="mdi mdi-printer btn btn-outline-info btn-rounded" target="_blank" href="{{url('cabor/cetak')}}"> Print</a>
                     </div>
 
                     </p>

@@ -46,6 +46,8 @@ Route::POST('/cabor/store', [CaborController::class, 'store']);
 Route::get('/cabor/edit/{id}', [CaborController::class, 'edit']);
 Route::post('/cabor/{id}', [CaborController::class, 'update']);
 Route::get('/cabor/delete/{id}', [CaborController::class, 'destroy']);
+Route::get('/cabor/cetak', [CaborController::class, 'cetak']);
+Route::get('/cabor/exportpdf', [CaborController::class, 'exportpdf']);
 
 // Kecamatan
 Route::get('/kecamatan', [KecamatanController::class, 'index']);
