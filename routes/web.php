@@ -46,17 +46,12 @@ Route::POST('/cabor/store', [CaborController::class, 'store']);
 Route::get('/cabor/edit/{id}', [CaborController::class, 'edit']);
 Route::post('/cabor/{id}', [CaborController::class, 'update']);
 Route::get('/cabor/delete/{id}', [CaborController::class, 'destroy']);
-Route::get('/cabor/cetak', [CaborController::class, 'cetak']);
-Route::get('/cabor/exportpdf', [CaborController::class, 'exportpdf']);
 
 // Kecamatan
 Route::get('/kecamatan', [KecamatanController::class, 'index']);
 
 // Peserta
 Route::get('/peserta', [PesertaController::class, 'index']);
-Route::get('/peserta/pdf', [PesertaController::class, 'generatePDF']);
-Route::get('/peserta/cetak', [PesertaController::class, 'cetakpdf']);
-Route::get('/peserta/excel', [PesertaController::class, 'export_excel']);
 Route::resource('peserta', PesertaController::class);
 
 // route event

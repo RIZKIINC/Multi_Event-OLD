@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cabor;
-use Carbon\Carbon;
 use DB;
-use PDF;
 
 class CaborController extends Controller
 {
@@ -18,26 +16,6 @@ class CaborController extends Controller
         $cabor = DB::table('cabang_olahraga')->get();
 
         return view('admin.cabor.cabor', compact('cabor'));
-    }
-/**
-     * cetak.
-     */
-    public function cetak()
-    {
-        $cetak = DB::table('cabang_olahraga')->get();
-
-        $hariini = Carbon::now();
-
-        return view('admin.cabor.cetak', compact('cetak','hariini'));
-    }
-
-    // export pdf masih error
-    public function exportpdf(){
-        // $data = DB::table('users')->get();
-        $data = Cabor::all();
-        $pdf = PDF::loadview('admin.cabor.exportpdf', ['data' => $data])->setPaper('a4', 'potrait');
-
-        return $pdf->download('Data_Cabor.pdf');
     }
 
     /**
